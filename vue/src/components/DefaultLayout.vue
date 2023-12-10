@@ -94,7 +94,7 @@ import { useRouter } from "vue-router";
 
 const navigation = [
   { name: "Dashboard", to: { name: "Dashboard" } },
-  { name: "survey", to: { name: "Survey" } },
+  { name: "Surveys", to: { name: "Survey" } },
 ];
 
 export default {
