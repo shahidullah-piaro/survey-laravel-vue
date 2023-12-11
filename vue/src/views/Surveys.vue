@@ -1,6 +1,8 @@
 <template>
-  <PageComponent title="Survey">
-    Content Goes Here
+  <PageComponent>
+    <template v-slot:header>
+      <h1 class="text-3xl font-bold text-gray-900">Surveys</h1>
+    </template>
   </PageComponent>
 </template>
 

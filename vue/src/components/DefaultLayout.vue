@@ -94,7 +94,7 @@ import { useRouter } from "vue-router";
 
 const navigation = [
   { name: "Dashboard", to: { name: "Dashboard" } },
-  { name: "Surveys", to: { name: "Survey" } },
+  { name: "Surveys", to: { name: "Surveys" } },
 ];
 
 export default {
@@ -115,10 +115,12 @@ export default {
     const router = useRouter();
 
     function logout() {
-      store.commit("logout");
-      router.push({
+      store.dispatch("logout")
+      .then(()=>{
+        router.push({
         name: "Login",
       });
+      })
     }
 
     //store.dispatch("getUser");
