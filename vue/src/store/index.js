@@ -72,7 +72,6 @@ const store = createStore({
         commit('dashboardLoading', false)
         return error;
       })
-
     },
     getSurveys({ commit }, {url = null} = {}) {
       commit('setSurveysLoading', true)
@@ -124,7 +123,8 @@ const store = createStore({
             return res;
           });
       } else {
-        response = axiosClient.post("/survey", survey).then((res) => {
+        response = axiosClient.post("/survey", survey)
+        .then((res) => {
           commit('setCurrentSurvey', res.data)
           return res;
         });
