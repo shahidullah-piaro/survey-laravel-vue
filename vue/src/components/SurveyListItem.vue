@@ -79,11 +79,9 @@
   </div>
 </template>
 
-<script setup>
-const { survey } = defineProps({
-  survey: Object,
-});
-const emit = defineEmits(["delete", "edit"]);
+<script >
+
 </script>
 
-<style></style>
+<style>
+</style>
